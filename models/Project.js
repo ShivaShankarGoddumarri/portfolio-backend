@@ -1,12 +1,15 @@
 const mongoose = require("mongoose");
 
-const projectSchema = new mongoose.Schema({
+const ProjectSchema = new mongoose.Schema({
+  id: Number,
   title: String,
   description: String,
-  techStack: [String],
-  github: String,
-  demo: String,
   image: String,
+  tags: [String],
+  date: String,
+  category: String,
+  github: String,
+  webapp: String,
 });
 
-module.exports = mongoose.model("Project", projectSchema);
+module.exports = mongoose.model("Project", ProjectSchema);

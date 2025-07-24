@@ -12,7 +12,15 @@ app.use(express.json());
 
 // Routes
 const projectRoutes = require("./routes/projects");
+const bioRoutes = require("./routes/bio");
+const skillsRoutes = require("./routes/skills");
+const experiencesRoutes = require("./routes/experiences");
+const educationRoutes = require("./routes/education");
 app.use("/api/projects", projectRoutes);
+app.use("/api/bio", bioRoutes);
+app.use("/api/skills", skillsRoutes);
+app.use("/api/experiences", experiencesRoutes);
+app.use("/api/education", educationRoutes);
 
 // DB + Server Start
 const PORT = process.env.PORT || 5000;
